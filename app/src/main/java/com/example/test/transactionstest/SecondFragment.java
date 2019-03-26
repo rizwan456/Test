@@ -9,14 +9,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.test.R;
-import com.example.test.databinding.BaseFragmentBinding;
+import com.example.test.databinding.SecondFragmentBinding;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link BaseFragment#newInstance} factory method to
+ * Use the {@link SecondFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class BaseFragment extends Fragment {
+public class SecondFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -27,7 +27,7 @@ public class BaseFragment extends Fragment {
     private String mParam2;
 
 
-    public BaseFragment() {
+    public SecondFragment() {
         // Required empty public constructor
     }
 
@@ -37,11 +37,11 @@ public class BaseFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment BaseFragment.
+     * @return A new instance of fragment SecondFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static BaseFragment newInstance(String param1, String param2) {
-        BaseFragment fragment = new BaseFragment();
+    public static SecondFragment newInstance(String param1, String param2) {
+        SecondFragment fragment = new SecondFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -58,14 +58,13 @@ public class BaseFragment extends Fragment {
         }
     }
 
-    BaseFragmentBinding baseFragmentBinding;
+    SecondFragmentBinding secondFragmentBinding;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        baseFragmentBinding= DataBindingUtil.inflate(inflater,R.layout.fragment_base,container,false);
-        getChildFragmentManager().beginTransaction().replace(R.id.baseFrame,FirstFragment.newInstance(null,null)).commit();
-        return baseFragmentBinding.getRoot();
+       secondFragmentBinding= DataBindingUtil.inflate(inflater,R.layout.fragment_second,container,false);
+        return secondFragmentBinding.getRoot();
     }
 
 }
