@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="LoadingBinding">
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LoadingAnimations.LoadingFragment">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="20dp"
+            android:layout_height="3dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/background"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>
